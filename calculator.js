@@ -42,7 +42,13 @@ function switchSign(){
             display.value =  display.value.substring(0, index) + sign + display.value.substring(index + 1);
         }
     }
-    else if(display.value.length > 0 ){
+    else if(display.value.charAt(i) === '-'){
+        display.value = "+" + display.value.substring(1);
+    }
+    else if(display.value.charAt(i) === '+'){
+        display.value = "-" + display.value.substring(1);
+    }
+    else if(display.value.length > 0){
         display.value = "-" + display.value.substring(0);
     }
 }
